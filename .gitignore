@@ -1,0 +1,55 @@
+executables/
+
+# ==========================================
+# Operating System Files
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ==========================================
+# Common Editors and IDEs
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# IntelliJ / WebStorm / PyCharm
+.idea/
+*.iws
+
+# Visual Studio / MonoDevelop
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# System & Local Text Editors
+*.swp
+*.swo
+.project
+.classpath
+
+# ==========================================
+# Runtime / Environment Logs and Backups
+# ==========================================
+*.log
+*.bak
+*.tmp
+*.temp
+.env
+.env.local
