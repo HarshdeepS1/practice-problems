@@ -162,3 +162,30 @@ uint32_t read_result(void) {
 //             printf("Default");
 //     }
 // }
+
+/*
+Quick Problem: Count Trailing Zeros
+
+Write a function that returns the number of trailing zero bits in a 32-bit unsigned integer (i.e., how many 0 bits before the first 1, counting from bit 0). Return 32 if the input is 0.
+
+uint8_t count_trailing_zeros(uint32_t n);
+
+Example:
+
+count_trailing_zeros(0b1000)  -> 3
+count_trailing_zeros(0b1)     -> 0
+count_trailing_zeros(0)       -> 32
+
+Try to do it without a 32-iteration loop.
+
+*/
+
+uint8_t count_trailing_zeros(uint32_t n) {
+    if (n == 0) return 32;
+    static const uint8_t debruijn_table[32] = {
+        0, 1, 28, 2, 29, 14, 24, 3, 30, 22, 20, 15, 25, 17, 4, 8,
+        31, 27, 13, 23, 21, 19, 16, 7, 26, 12, 18, 6, 11, 5, 10, 9
+    };
+    return debruijn_table[((n & -n) * 0x077CB531u) >> 27];
+}
+

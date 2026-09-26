@@ -76,3 +76,6 @@ void deframer_process_byte(deframer_t *d, uint8_t byte) {
     }
 }
 
+uint16_t swap_bytes(uint16_t val) {
+    return ((val & 0xFF00) >> 8) | ((val & 0x00FF) << 8);
+}
