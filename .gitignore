@@ -1,6 +1,6 @@
 executables/
-python/__pycache__
-python/.pytest_cache
+**/__pycache__/
+**/.pytest_cache/
 
 # ==========================================
 # Operating System Files
